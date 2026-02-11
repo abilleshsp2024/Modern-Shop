@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - Modern Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-content">
+      <a href="shop.html" class="logo text-brand">ModernShop</a>
+      <a href="products.html" class="logo">Products</a>
+      <a href="contact.html" class="logo">Contact</a>
+      <a href="aboutus.html" class="logo">About Us</a>
+
+
+      <div class="cart-btn" onclick="window.location.href='checkout.html'">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>Cart</span>
+        <span id="cart-count" class="cart-badge">0</span>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1>Discover Our Collection</h1>
+      <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+        Explore the latest trends in technology and fashion. Quality products selected just for you.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="product-grid" class="product-grid">
+      <!-- Products will be injected here by script.js -->
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 class="text-brand">Modern Shop</h3>
+          <p class="footer-text">
+            Discover the best products with exceptional quality. We are committed to providing you with a seamless
+            shopping experience.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Modern Shop. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+
+  <script src="script.js"></script>
+  <script>
+    // Check if user is logged in (simple check)
+    // In a real app, this would be more secure
+    if (!localStorage.getItem('isLoggedIn')) {
+      window.location.href = 'index.html';
+    } else {
+      // Render products when page loads
+      renderProducts();
+    }
+  </script>
+</body>
+
+</html>
